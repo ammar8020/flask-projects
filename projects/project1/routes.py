@@ -1,5 +1,6 @@
-from project1 import app
+from project1 import app, db
 from flask import render_template, request, json, Response
+from project1.models import User, Movie, Watchlist
 
 movies_data = [
     {
@@ -84,3 +85,11 @@ def api(id=None):
         json_data = movies_data[int(id)]
 
     return Response(json.dumps(json_data), mimetype="application/json")
+
+
+@app.route("/user")
+def user():
+    # User(user_id=1, first_name="Ammar", last_name="Ahmed", email="ammar@gmail.com", password="1234").save()
+    # User(user_id=2, first_name="Jose", last_name="Sal", email="jose@gmail.com", password="1234").save()
+    users = User.objects.all()
+    return render_template("user.html", users=users)

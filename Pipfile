@@ -11,6 +11,7 @@ pre-commit = "*"
 flask = "*"
 flask-wtf = "*"
 python-dotenv = "*"
+flask-mongoengine = "*"
 
 [requires]
 python_version = "3.8"
