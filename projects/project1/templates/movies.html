@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block main_content %}
+<h1>Movies</h1>
+
+<!--  Display the Term and Year here --->
+<h3>Term: {{ term }}</h3>
+
+<div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Movie ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Credits</th>
+        <th scope="col">Term</th>
+        <th scope="col">Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for movie in movies_data %}
+      <tr>
+        <td scope="row">{{ movie['movieID'] }}</td>
+        <td>{{ movie['title'] }}</td>
+        <td>{{ movie['description'] }}</td>
+        <td>{{ movie['credits'] }}</td>
+        <td>{{ movie['term'] }}</td>
+        <td>
+          <form action="{{ url_for('watchlist') }}" method="POST">
+            <input
+              type="hidden"
+              name="movieID"
+              value="{{ movie['movieID'] }}"
+            />
+            <input type="hidden" name="title" value="{{ movie['title'] }}" />
+            <input type="hidden" name="term" value="{{ movie['term'] }}" />
+
+            <button>Add</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
