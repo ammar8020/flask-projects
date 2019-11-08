@@ -4,11 +4,32 @@
   <div class="col-md-12 text-center">
     <h1>Welcome to Movies Watchlist</h1>
 
-    {% if login %}
+    {% if session['username'] %}
     <h3>Let's get started.</h3>
     {% else %}
     <p>Already registered? <a href="{{ url_for('login') }}">Login</a></p>
     {% endif %}
+
+    <div style="text-align:left;">
+      <h2>Lorem Ipsum</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        venenatis non libero sit amet hendrerit. Nulla vel faucibus nibh. Fusce
+        nec mauris tempor, venenatis arcu id, interdum magna. Donec maximus
+        massa et libero ullamcorper ultrices. Vestibulum ut tellus in est
+        maximus porta. Donec in ex finibus, dapibus quam vitae, sollicitudin
+        orci. Aliquam erat volutpat. In sit amet leo risus. In vulputate purus
+        id felis fringilla, at pharetra justo consectetur. Vivamus pretium nunc
+        id est blandit, vel blandit purus auctor. Sed consectetur est id
+        suscipit faucibus. Integer a sagittis enim, ac cursus libero. Sed
+        euismod posuere vestibulum. Ut ipsum massa, vehicula non dui ut, dapibus
+        placerat nisi. Aliquam a dictum quam. Fusce vestibulum elit erat, at
+        porta lectus hendrerit sagittis. Maecenas sollicitudin blandit nisl non
+        fringilla. In non leo accumsan ipsum pharetra ultricies. Donec congue
+        luctus nisl vel ultricies.s
+      </p>
+    </div>
   </div>
 </div>
 

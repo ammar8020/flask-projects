@@ -1,7 +1,6 @@
 {% extends "layout.html" %} {% block main_content %}
 <h1>Movies</h1>
 
-<!--  Display the Term and Year here --->
 <h3>Term: {{ term }}</h3>
 
 <div>
@@ -19,7 +18,7 @@
     <tbody>
       {% for movie in movies_data %}
       <tr>
-        <td scope="row">{{ movie['movieID'] }}</td>
+        <td scope="row">{{ movie['movie_id'] }}</td>
         <td>{{ movie['title'] }}</td>
         <td>{{ movie['description'] }}</td>
         <td>{{ movie['credits'] }}</td>
@@ -28,8 +27,8 @@
           <form action="{{ url_for('watchlist') }}" method="POST">
             <input
               type="hidden"
-              name="movieID"
-              value="{{ movie['movieID'] }}"
+              name="movie_id"
+              value="{{ movie['movie_id'] }}"
             />
             <input type="hidden" name="title" value="{{ movie['title'] }}" />
             <input type="hidden" name="term" value="{{ movie['term'] }}" />

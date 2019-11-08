@@ -15,6 +15,9 @@
           >Movies</a
         >
       </li>
+
+      {% if not session['username'] %}
+
       <li class="nav-item">
         <a
           href="{{ url_for('register') }}"
@@ -22,6 +25,19 @@
           >Register</a
         >
       </li>
+
+      {% endif %}
+
+      <li class="nav-item">
+        <a
+          href="{{ url_for('watchlist') }}"
+          class="nav-link {% if watchlist %} active {% endif %}"
+          >Watchlist</a
+        >
+      </li>
+
+      {% if not session['username'] %}
+
       <li class="nav-item">
         <a
           href="{{ url_for('login') }}"
@@ -29,6 +45,14 @@
           >Login</a
         >
       </li>
+
+      {% else %}
+
+      <li class="nav-item">
+        <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+      </li>
+
+      {% endif %}
     </ul>
   </nav>
   <hr style="clear:both" />
