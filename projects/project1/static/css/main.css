@@ -64,7 +64,8 @@ input[type='password']:focus {
   border-bottom: 2px solid #0f0f0f;
 }
 .bottom-container {
-  background: #333;
+  /* background: #333; */
+  background: #252529;
   padding: 5px;
   border-top: 2px solid #0f0f0f;
   /* position: absolute; */
@@ -157,7 +158,7 @@ a {
 }
 
 section#entertainment {
-  background: url(../images/section-bg.jpg) no-repeat bottom/cover;
+  background: url(../images/6551331661_2808dcb790_o.jpg) no-repeat bottom/cover;
   padding: 10rem 0;
 }
 
@@ -172,7 +173,8 @@ section#entertainment {
 #showcase {
   margin: 0;
   padding: 0;
-  background: url('../images/showcase.jpg') no-repeat center/cover;
+  background: url('../images/1-movie-2-signage-under-white-clouds-1200450.jpg')
+    no-repeat center/cover;
   width: 100%;
   height: 100vh;
   position: relative;
