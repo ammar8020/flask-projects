@@ -2,36 +2,13 @@
 
 <div class="row">
   <div class="col-md-12 text-center">
-    <!-- <h1>Welcome to Movies Watchlist</h1> -->
-
-    {% if session['username'] %}
-    <h3>Let's get started.</h3>
+    <!-- {% if session['username'] %}
+    <h3>Let's maintain your Movies Watchlist.</h3>
     {% else %}
     <p>Already registered? <a href="{{ url_for('login') }}">Login</a></p>
-    {% endif %}
+    {% endif %} -->
 
-    <!-- <div style="text-align:left;">
-      <h2>Lorem Ipsum</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        venenatis non libero sit amet hendrerit. Nulla vel faucibus nibh. Fusce
-        nec mauris tempor, venenatis arcu id, interdum magna. Donec maximus
-        massa et libero ullamcorper ultrices. Vestibulum ut tellus in est
-        maximus porta. Donec in ex finibus, dapibus quam vitae, sollicitudin
-        orci. Aliquam erat volutpat. In sit amet leo risus. In vulputate purus
-        id felis fringilla, at pharetra justo consectetur. Vivamus pretium nunc
-        id est blandit, vel blandit purus auctor. Sed consectetur est id
-        suscipit faucibus. Integer a sagittis enim, ac cursus libero. Sed
-        euismod posuere vestibulum. Ut ipsum massa, vehicula non dui ut, dapibus
-        placerat nisi. Aliquam a dictum quam. Fusce vestibulum elit erat, at
-        porta lectus hendrerit sagittis. Maecenas sollicitudin blandit nisl non
-        fringilla. In non leo accumsan ipsum pharetra ultricies. Donec congue
-        luctus nisl vel ultricies.s
-      </p>
-    </div> -->
-
-    <div id="showcase">
+    <div id="display">
       <div class="section-main container">
         <h1>Welcome to Movies Watchlist</h1>
         <h2>You'll never forget your next goto movie with us.</h2>
@@ -43,11 +20,11 @@
       </div>
     </div>
 
-    <!-- Music Section -->
-    <section id="music" class="section">
+    <!-- Section 1 -->
+    <section id="movie" class="section">
       <div class="container">
         <h2 class="section-head">
-          <i class="fas fa-music"></i> Opening this week
+          <i class="fas fa-movie"></i> Opening this week
         </h2>
         <h3>2020 most anticipated</h3>
         <p class="lead">
@@ -58,18 +35,16 @@
           porro.
         </p>
         <a href="#" class="btn btn-primary mb">Add to your Watchlist</a>
-        <p class="text-light">
-          Movie hits theatre on 21st of December.
-        </p>
+
         <img
-          src="{{ url_for('static', filename='images/app-entertainment-ipad-mockup-265685.jpg') }}"
+          src="{{ url_for('static', filename='images/krists-luhaers-AtPWnYNDJnM-unsplash.jpg') }}"
           alt=""
         />
       </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="section bg-light">
+    <!-- Section 2 -->
+    <section id="Section-2" class="section bg-light">
       <div class="container">
         <h3>Featured Movie you don't want to miss</h3>
         <p class="lead">
@@ -83,14 +58,14 @@
         </p>
         <a href="#" class="btn btn-secondary">Read More</a>
         <img
-          src="{{ url_for('static', filename='images/krists-luhaers-AtPWnYNDJnM-unsplash.jpg') }}"
+          src="{{ url_for('static', filename='images/app-entertainment-ipad-mockup-265685.jpg') }}"
           alt=""
         />
       </div>
     </section>
 
-    <!-- Entertainment Section -->
-    <section id="entertainment" class="section">
+    <!-- Section 3 -->
+    <section id="section-3" class="section">
       <div class="container">
         <h3>Coming Soon</h3>
         <p class="lead">
@@ -104,10 +79,10 @@
       </div>
     </section>
 
-    <!-- Gift Card Section -->
-    <section id="gift-cards" class="section bg-light">
+    <!-- Section 4 -->
+    <section id="section-4" class="section bg-light">
       <div class="container">
-        <div class="gift-cards">
+        <div class="section-4">
           <div>
             <img
               src="{{ url_for('static', filename='images/jens-kreuter-ngMtsE5r9eI-unsplash.jpg') }}"

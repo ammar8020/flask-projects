@@ -15,8 +15,8 @@
           <th scope="col">Movie ID</th>
           <th scope="col">Title</th>
           <th scope="col">Description</th>
-          <th scope="col">Credits</th>
-          <th scope="col">Term</th>
+          <th scope="col">Year</th>
+          <th scope="col">Category</th>
         </tr>
       </thead>
       <tbody>
@@ -25,8 +25,8 @@
           <td scope="row">{{ movie.r2['movie_id'] }}</td>
           <td>{{ movie.r2['title'] }}</td>
           <td>{{ movie.r2['description'] }}</td>
-          <td>{{ movie.r2['credits'] }}</td>
-          <td>{{ movie.r2['term'] }}</td>
+          <td>{{ movie.r2['year'] }}</td>
+          <td>{{ movie.r2['category'] }}</td>
         </tr>
         {% endfor %}
       </tbody>

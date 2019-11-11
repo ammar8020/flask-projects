@@ -54,7 +54,7 @@ def logout():
 @app.route("/movies/<term>")
 def movies(term=None):
     if term is None:
-        term = "Spring 2019"
+        term = "2019"
     classes = Movie.objects.order_by("+movie_id")
     return render_template("movies.html", movies_data=classes, movies=True, term=term)
 
@@ -153,6 +153,5 @@ def api(id=None):
 @app.route("/user")
 def user():
     # User(user_id=1, first_name="Ammar", last_name="Ahmed", email="ammar@gmail.com", password="1234").save()
-    # User(user_id=2, first_name="Jose", last_name="Sal", email="jose@gmail.com", password="1234").save()
     users = User.objects.all()
     return render_template("user.html", users=users)

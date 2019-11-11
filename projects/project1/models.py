@@ -22,8 +22,8 @@ class Movie(db.Document):
     movie_id = db.StringField(max_length=10, unique=True)
     title = db.StringField(max_length=100)
     description = db.StringField(max_length=255)
-    credits = db.IntField()
-    term = db.StringField(max_length=25)
+    year = db.IntField()
+    category = db.StringField(max_length=25)
 
 
 class Watchlist(db.Document):

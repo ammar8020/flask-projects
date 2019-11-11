@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block main_content %}
 <h1>Movies</h1>
 
-<h3>Term: {{ term }}</h3>
+<h3>Popular: {{ term }}</h3>
 
 <div>
   <table class="table table-hover">
@@ -10,9 +10,9 @@
         <th scope="col">Movie ID</th>
         <th scope="col">Title</th>
         <th scope="col">Description</th>
-        <th scope="col">Credits</th>
-        <th scope="col">Term</th>
-        <th scope="col">Add</th>
+        <th scope="col">Year</th>
+        <th scope="col">Category</th>
+        <th scope="col">Add to Watchlist</th>
       </tr>
     </thead>
     <tbody>
@@ -21,8 +21,8 @@
         <td scope="row">{{ movie['movie_id'] }}</td>
         <td>{{ movie['title'] }}</td>
         <td>{{ movie['description'] }}</td>
-        <td>{{ movie['credits'] }}</td>
-        <td>{{ movie['term'] }}</td>
+        <td>{{ movie['year'] }}</td>
+        <td>{{ movie['category'] }}</td>
         <td>
           <form action="{{ url_for('watchlist') }}" method="POST">
             <input
@@ -33,7 +33,7 @@
             <input type="hidden" name="title" value="{{ movie['title'] }}" />
             <input type="hidden" name="term" value="{{ movie['term'] }}" />
 
-            <button>Add</button>
+            <button>Add to Watchlist</button>
           </form>
         </td>
       </tr>

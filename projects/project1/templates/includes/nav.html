@@ -8,11 +8,20 @@
           >Home</a
         >
       </li>
+
       <li class="nav-item">
         <a
           href="{{ url_for('movies') }}"
           class="nav-link {% if movies %} active {% endif %}"
           >Movies</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="{{ url_for('watchlist') }}"
+          class="nav-link {% if watchlist %} active {% endif %}"
+          >Watchlist</a
         >
       </li>
 
@@ -26,17 +35,7 @@
         >
       </li>
 
-      {% endif %}
-
-      <li class="nav-item">
-        <a
-          href="{{ url_for('watchlist') }}"
-          class="nav-link {% if watchlist %} active {% endif %}"
-          >Watchlist</a
-        >
-      </li>
-
-      {% if not session['username'] %}
+      {% endif %} {% if not session['username'] %}
 
       <li class="nav-item">
         <a
@@ -55,5 +54,5 @@
       {% endif %}
     </ul>
   </nav>
-  <hr style="clear:both" />
+  <!-- <hr style="clear:both" /> -->
 </header>
