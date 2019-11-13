@@ -1,10 +1,15 @@
-{% extends "layout.html" %} {% block main_content %}
+{% extends "layout.html" %} {% block head_content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/movies.css') }}"
+/>
+{% endblock %} {% block main_content %}
 <h1>Movies</h1>
 
 <h3>Popular: {{ term }}</h3>
 
 <div>
-  <table class="table table-hover">
+  <table class="content-table">
     <thead>
       <tr>
         <th scope="col">Movie ID</th>
@@ -17,7 +22,7 @@
     </thead>
     <tbody>
       {% for movie in movies_data %}
-      <tr>
+      <tr class="active-row">
         <td scope="row">{{ movie['movie_id'] }}</td>
         <td>{{ movie['title'] }}</td>
         <td>{{ movie['description'] }}</td>
@@ -33,7 +38,7 @@
             <input type="hidden" name="title" value="{{ movie['title'] }}" />
             <input type="hidden" name="term" value="{{ movie['term'] }}" />
 
-            <button>Add to Watchlist</button>
+            <button class="primary-btn">Add to Watchlist</button>
           </form>
         </td>
       </tr>
