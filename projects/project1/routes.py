@@ -20,6 +20,11 @@ def index():
     return render_template("index.html", index=True)
 
 
+@app.route("/trending")
+def trending():
+    return render_template("trending.html", trending=True)
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if session.get("username"):

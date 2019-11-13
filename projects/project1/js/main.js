@@ -1,1 +1,0 @@
-<!-- <script src="{{ url_for('js', filename='main.js') }}"></script> -->
