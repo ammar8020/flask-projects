@@ -1,55 +1,71 @@
-{% extends "layout.html" %} {% block main_content %}
-<h2>New User Registration</h2>
+{% extends "layout.html" %} {% block head_content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/login.css') }}"
+/>
+{% endblock %} {% block main_content %}
 
-<div class="container">
-  <form name="register" action="" method="post" novalidate>
-    <fieldset class="form-group">
-      <legend>{{ title }}</legend>
-      {{ form.hidden_tag() }}
+<div id="wrapper">
+  <div id="left" style="height: 130vh;">
+    <div id="signin">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/red-translucent-die-on-top-of-black-surface-979722.jpg') }}"
+          alt=""
+        />
+      </div>
+      <form name="login" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
 
-      <p>
-        {{ form.email.label }}<br />
-        {{ form.email }}
-        {% for error in form.email.errors %}
-        <span class="error-message">{{ error }}</span>
-        {% endfor %}
-      </p>
-      <p>
-        {{ form.password.label }}<br />
-        {{ form.password }}
-        {% for error in form.password.errors %}
-        <span class="error-message">{{ error }}</span>
-        {% endfor %}
-      </p>
+        <div>
+          {{ form.email.label }}<br />
+          {{ form.email(size=50, class_="text-input")}} {% for error in
+          form.email.errors %}
+          <span class="error-message">{{ error }}</span>
+          {% endfor %}
+        </div>
+        <div>
+          {{ form.password.label }}<br />
+          {{ form.password(size=50, class_="text-input") }} {% for error in
+          form.password.errors %}
+          <span class="error-message">{{ error }}</span>
+          {% endfor %}
+        </div>
 
-      <p>
-        {{ form.confirm_password.label }}<br />
-        {{ form.confirm_password }}
-        {% for error in form.confirm_password.errors %}
-        <span class="error-message">{{ error }}</span>
-        {% endfor %}
-      </p>
+        <div>
+          {{ form.confirm_password.label }}<br />
+          {{ form.confirm_password(size=50, class_="text-input") }} {% for error
+          in form.confirm_password.errors %}
+          <span class="error-message">{{ error }}</span>
+          {% endfor %}
+        </div>
 
-      <p>
-        {{ form.first_name.label }}<br />
-        {{ form.first_name }}
-        {% for error in form.first_name.errors %}
-        <span class="error-message">{{ error }}</span>
-        {% endfor %}
-      </p>
+        <div>
+          {{ form.first_name.label }}<br />
+          {{ form.first_name(size=50, class_="text-input") }} {% for error in
+          form.first_name.errors %}
+          <span class="error-message">{{ error }}</span>
+          {% endfor %}
+        </div>
 
-      <p>
-        {{ form.last_name.label }}<br />
-        {{ form.last_name }}
-        {% for error in form.last_name.errors %}
-        <span class="error-message">{{ error }}</span>
-        {% endfor %}
-      </p>
+        <div>
+          {{ form.last_name.label }}<br />
+          {{ form.last_name(size=50, class_="text-input") }} {% for error in
+          form.last_name.errors %}
+          <span class="error-message">{{ error }}</span>
+          {% endfor %}
+        </div>
 
-      <p>
-        {{ form.submit() }}
-      </p>
-    </fieldset>
-  </form>
+        <div>
+          {{ form.submit(class_="primary-btn") }}
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="right">
+    <div id="showcase" style="height: 130vh;">
+      <div class="showcase-content"></div>
+    </div>
+  </div>
 </div>
 {% endblock %}

@@ -14,6 +14,9 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
+
+    {% block head_content %} {% endblock %}
+
     <title>Movies Watchlist</title>
   </head>
   <body>

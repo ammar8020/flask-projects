@@ -46,8 +46,8 @@ hr {
 
 /* Login/Register form */
 
-input[type='text'],
-input[type='password'] {
+input[type="text"],
+input[type="password"] {
   width: 50%;
   padding: 7px;
   /* margin: 5px 0 22px 0; */
@@ -56,8 +56,8 @@ input[type='password'] {
   background: #f1f1f1;
 }
 
-input[type='text']:focus,
-input[type='password']:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -67,9 +67,16 @@ input[type='password']:focus {
   padding: 5px;
   border-bottom: 2px solid #0f0f0f;
 }
+
+/* Navigation bar */
+
+.navbar {
+  background: #252529;
+}
+
 .bottom-container {
-  background: #333;
-  /* background: #252529; */
+  /* background: #333; */
+  background: #252529;
   padding: 5px;
   border-top: 2px solid #0f0f0f;
   /* position: absolute; */
@@ -122,9 +129,9 @@ footer {
   top: 2em;
 }
 
-/* Home Page */
+/* Index Page */
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
 
 /* CSS Variables */
 :root {
@@ -136,8 +143,9 @@ footer {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
-  background-color: #252529;
+  font-family: "PT Sans", sans-serif;
+  /* background-color: #252529; */
+  background-color: #181818;
   margin: 0;
   color: #fff;
   line-height: 1.6;
@@ -182,8 +190,8 @@ section#section-3 {
 #display {
   margin: 0;
   padding: 0;
-  background: url('../images/1-movie-2-signage-under-white-clouds-1200450.jpg')
-    no-repeat center/cover;
+  background: url("../images/2606435795_66c5e5127c_o.jpg") no-repeat
+    center/cover;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -269,7 +277,7 @@ section#section-3 {
 }
 
 @media screen and (max-width: 780px) {
-  .gift-cards {
+  .section-4 {
     grid-template-columns: 1fr;
   }
 
@@ -283,3 +291,5 @@ section#section-3 {
     display: none;
   }
 }
+
+/* Login and Register form */
