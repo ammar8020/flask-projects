@@ -6,16 +6,16 @@ from project1.models import User
 
 class LoginForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
-    password = StringField("Password", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
 
 class RegisterForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
-    password = StringField(
+    password = PasswordField(
         "Password", validators=[DataRequired(), Length(min=4, max=20)]
     )
-    confirm_password = StringField(
+    confirm_password = PasswordField(
         "Confirm Password",
         validators=[DataRequired(), Length(min=4, max=20), EqualTo("password")],
     )

@@ -1,39 +1,33 @@
-const slides = document.querySelectorAll(".slide");
-const next = document.querySelector("#next");
-const prev = document.querySelector("#prev");
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
 const auto = true;
 const intervalTime = 1500;
 let slideInterval;
 
 const nextSlide = () => {
-  const current = document.querySelector(".current");
-  current.classList.remove("current");
-  // Check for next slide
+  const current = document.querySelector('.current');
+  current.classList.remove('current');
   if (current.nextElementSibling) {
-    // Add current to next sibling
-    current.nextElementSibling.classList.add("current");
+    current.nextElementSibling.classList.add('current');
   } else {
-    // Add current to start
-    slides[0].classList.add("current");
+    slides[0].classList.add('current');
   }
-  setTimeout(() => current.classList.remove("current"));
+  setTimeout(() => current.classList.remove('current'));
 };
 
 const prevSlide = () => {
-  const current = document.querySelector(".current");
-  current.classList.remove("current");
-  // Check for prev slide
+  const current = document.querySelector('.current');
+  current.classList.remove('current');
   if (current.previousElementSibling) {
-    // Add current to prev sibling
-    current.previousElementSibling.classList.add("current");
+    current.previousElementSibling.classList.add('current');
   } else {
-    // Add current to last
-    slides[slides.length - 1].classList.add("current");
+    slides[slides.length - 1].classList.add('current');
   }
-  setTimeout(() => current.classList.remove("current"));
+  setTimeout(() => current.classList.remove('current'));
 };
 
-next.addEventListener("click", e => {
+next.addEventListener('click', e => {
   nextSlide();
   if (auto) {
     clearInterval(slideInterval);
@@ -41,7 +35,7 @@ next.addEventListener("click", e => {
   }
 });
 
-prev.addEventListener("click", e => {
+prev.addEventListener('click', e => {
   prevSlide();
   if (auto) {
     clearInterval(slideInterval);

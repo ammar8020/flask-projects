@@ -1,12 +1,7 @@
-* {
-  font-family: sans-serif;
-}
-
 .content-table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
-  /* min-width: 400px; */
   width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
@@ -14,7 +9,6 @@
 }
 
 .content-table thead tr {
-  /* background-color: #009879; */
   background-color: #e50914;
   color: #ffffff;
   text-align: left;
@@ -35,17 +29,14 @@
 }
 
 .content-table tbody tr:last-of-type {
-  /* border-bottom: 2px solid #009879; */
   border-bottom: 2px solid #e50914;
 }
 
 .content-table tbody tr.active-row {
   font-weight: bold;
-  /* color: #009879; */
   color: #e50914;
 }
 
-/* Button */
 .primary-btn {
   padding: 0.7rem 1rem;
   height: 2.7rem;

@@ -26,22 +26,14 @@
     <title>Movies Watchlist</title>
   </head>
   <body>
-    <!-- <div class="container"> -->
-    {% include "includes/nav.html" %}
-    <!-- {% if session['username'] %} -->
-
-    <!-- <span class="user">Welcome, {{ session['username'] }}</span> -->
-
-    <!-- {% endif %} -->
-    {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages %} {% for category, message in messages %}
+    {% include "includes/nav.html" %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %} {% for
+    category, message in messages %}
     <div class="alert alert-{{ category }}">
       <p>{{ message }}</p>
     </div>
     {% endfor %} {% endif %} {% endwith %} {% block main_content %} {% endblock
-    %}
-    <!-- </div> -->
-    {% include "includes/footer.html" %}
+    %} {% include "includes/footer.html" %}
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>

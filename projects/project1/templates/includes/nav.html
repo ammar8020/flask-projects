@@ -33,6 +33,14 @@
         >
       </li>
 
+      <li class="nav-item">
+        <a
+          href="{{ url_for('users') }}"
+          class="nav-link {% if users %} active {% endif %}"
+          >Users</a
+        >
+      </li>
+
       {% if not session['username'] %}
 
       <li class="nav-item">
@@ -62,5 +70,4 @@
       {% endif %}
     </ul>
   </nav>
-  <!-- <hr style="clear:both" /> -->
 </header>
