@@ -14,10 +14,8 @@ from project1.forms import LoginForm, RegisterForm
 
 
 @app.route("/")
-@app.route("/index")
-@app.route("/home")
 def index():
-    return render_template("index.html", index=True)
+    return render_template("index.html")
 
 
 @app.route("/register", methods=["POST", "GET"])
@@ -41,7 +39,7 @@ def register():
         flash("User registered successfully", "success")
         return redirect(url_for("index"))
 
-    return render_template("register.html", title="Register", form=form, register=True)
+    return render_template("register.html", title="Register", form=form)
 
 
 @app.route("/watchlist", methods=["GET", "POST"])
@@ -95,9 +93,7 @@ def watchlist():
         )
     )
 
-    return render_template(
-        "watchlist.html", watchlist=True, title="Watchlist", classes=classes
-    )
+    return render_template("watchlist.html", title="Watchlist", classes=classes)
 
 
 @app.route("/users")
@@ -115,7 +111,7 @@ def logout():
 
 @app.route("/trending")
 def trending():
-    return render_template("trending.html", trending=True)
+    return render_template("trending.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -134,17 +130,15 @@ def login():
             flash(f"{user.first_name}, has successfully logged in!", "success")
             session["user_id"] = user.user_id
             session["username"] = user.first_name
-            return redirect("/index")
+            return redirect("/")
         else:
             flash("Login Credentials not correct", "danger")
 
-    return render_template("login.html", title="Login", form=form, login=True)
+    return render_template("login.html", title="Login", form=form)
 
 
 @app.route("/movies/")
 @app.route("/movies/<year>")
-def movies(year=None):
-    if year is None:
-        year = "2019"
+def movies(year="2019"):
     classes = Movie.objects.order_by("+movie_id")
-    return render_template("movies.html", movies_data=classes, movies=True, year=year)
+    return render_template("movies.html", movies_data=classes, year=year)

@@ -109,7 +109,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../images/32259343034_3664db3fda_o.jpg') no-repeat center
+  background: url("../images/32259343034_3664db3fda_o.jpg") no-repeat center
     center / cover;
   height: 90vh;
   text-align: center;

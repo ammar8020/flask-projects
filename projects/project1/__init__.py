@@ -1,5 +1,5 @@
 from flask import Flask
-from .config import Config
+from project1.config import Config
 from flask_mongoengine import MongoEngine
 
 app = Flask(__name__)
